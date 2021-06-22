@@ -51,7 +51,7 @@ Open the starter project in Android Studio
 
    - [x] A new layout
    - [x] A ScrollView
-   - [ ] A LinearLayout for Shoe Items
+   - [x] A LinearLayout for Shoe Items
    - [x] A FloatingActionButton with an action to navigate to the shoe detail screen
 
 - [x] In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
