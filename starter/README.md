@@ -14,65 +14,66 @@ Open the starter project in the latest stable version of Android Studio.
 
 Open the starter project in Android Studio
 
-##Steps
+## Steps
 
-1. Open the starter project in Android Studio
+- [x] Open the starter project in Android Studio
 
-2. Add the navigation libraries to the app build.gradle file
+- [x] Add the navigation libraries to the app build.gradle file
 
-3. Add the safe-arg plugin to the main and app build.gradle file
+- [x] Add the safe-arg plugin to the main and app build.gradle file
 
-4. Create a new navigation xml file
+- [x] Create a new navigation xml file
 
-5. Create a new Login destination.
+- [x] Create a new Login destination.
 
-   * Include email and password labels 
+   - [x] Include email and password labels 
+   - [x] Include email and password fields
+   - [x] Create buttons for creating a new login and logging in with an existing account
+   - [x] Clicking either button should navigate to the Welcome Screen.
 
-   - Include email and password fields
-   - Create buttons for creating a new login and logging in with an existing account
-   - Clicking either button should navigate to the Welcome Screen.
+- [x] Create a new Welcome screen destination that includes:
 
-6. Create a new Welcome screen destination that includes:
+   - [x] A new layout
+   - [x] At least 2 textviews
+   - [x] A navigation button with actions to navigate to the instructions screen
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the instructions screen
+- [x] Create a new Instruction destination that includes:
 
-7. Create a new Instruction destination that includes:
+   - [x] A new layout
+   - [x] At least 2 textviews
+   - [x] A navigation button with actions to navigate to the shoe list screen
 
-   * A new layout
-   * At least 2 textviews
-   * A navigation button with actions to navigate to the shoe list screen
+- [x] Create a class that extends ViewModel
 
-8. Create a class that extends ViewModel
+   - [x]  Use a LiveData field that returns the list of shoes
 
-   *  Use a LiveData field that returns the list of shoes
+- [x] Create a new Shoe List destination that includes:
 
-9. Create a new Shoe List destination that includes:
+   - [x] A new layout
+   - [x] A ScrollView
+   - [ ] A LinearLayout for Shoe Items
+   - [x] A FloatingActionButton with an action to navigate to the shoe detail screen
 
-   * A new layout
-   * A ScrollView
-   * A LinearLayout for Shoe Items
-   * A FloatingActionButton with an action to navigate to the shoe detail screen
+- [x] In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
 
-10. In MainActivity, setup the nav controller with the toolbar and an AppBarConfiguration.
+- [ ] Create a new Shoe Detail destination that includes:
 
-11. Create a new Shoe Detail destination that includes:
+    - [ ] A new layout
+    - [ ] A TextView label and EditView for the
+      - [ ] Shoe Name
+      - [ ] Company
+      - [ ] Shoe Size
+      - [ ] Description
+    - [ ] A Cancel button with an action to navigate back to the shoe list screen
+    - [ ] A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
 
-    * A new layout
-    * A TextView label and EditView for the
-      * Shoe Name
-      * Company
-      * Shoe Size
-      * Description
-    * A Cancel button with an action to navigate back to the shoe list screen
-    * A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
+- [ ] Make sure you can’t go back to onboarding screens
 
-12. Make sure you can’t go back to onboarding screens
+- [ ] In the Shoe List screen:
 
-13. In the Shoe List screen:
-
-    * Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
-    * Observe the shoes variable from the ViewModel
-    * Use DataBindingUtil to inflate the shoe_list layout
-    * Add a new layout item into the scrollview for each shoe.
+    - [ ] Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
+    - [ ] Observe the shoes variable from the ViewModel
+    - [ ] Use DataBindingUtil to inflate the shoe_list layout
+    - [ ] Add a new layout item into the scrollview for each shoe.
+    
+- [ ] Make the layouts look pretty.
