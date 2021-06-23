@@ -72,8 +72,8 @@ Open the starter project in Android Studio
 - [ ] In the Shoe List screen:
 
     - [x] Use an Activity level ViewModel to hold a list of Shoes (use by activityViewModels)
-    - [ ] Observe the shoes variable from the ViewModel
-    - [ ] Use DataBindingUtil to inflate the shoe_list layout
+    - [x] Observe the shoes variable from the ViewModel
+    - [x] Use DataBindingUtil to inflate the shoe_list layout
     - [ ] Add a new layout item into the scrollview for each shoe.
     
 - [ ] Make the layouts look pretty.
