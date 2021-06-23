@@ -30,7 +30,52 @@ class ShoeListFragment: Fragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(MainActivityViewModel::class.java)
 
+        binding.floatingButton.setOnClickListener {
+            Timber.e("Clicked!")
+            viewModel.addShoe(Shoe("a", 2.0, "b", "c", arrayListOf("dd")))
+        }
+
+        viewModel.shoeList.observe(viewLifecycleOwner, Observer {
+            inflateList()
+        })
+
+
+
         return binding.root
 
+    }
+
+    private fun inflateList() {
+        Timber.e("Inflating list!")
+        viewModel.shoeList.value?.forEach { shoe ->
+//            val shoeRow = DataBindingUtil.inflate(layoutInflater, R.layout.list_row, binding.linearLayout, false)
+            val shoeRow = layoutInflater.inflate(R.layout.list_row, binding.linearLayout, false)
+
+            val nameText = shoeRow.findViewById<TextView>(R.id.nameText)
+            val sizeText = shoeRow.findViewById<TextView>(R.id.sizeText)
+            val companyText = shoeRow.findViewById<TextView>(R.id.companyText)
+            val descriptionText = shoeRow.findViewById<TextView>(R.id.descriptionText)
+            val imageText = shoeRow.findViewById<TextView>(R.id.imageText)
+
+            nameText.text = shoe.name
+            sizeText.text = shoe.size.toString()
+            companyText.text = shoe.company
+            descriptionText.text = shoe.description
+
+            if (shoe.images.isEmpty()) {
+                imageText.text = getString(R.string.missing_images)
+            } else {
+                val stringBuffer = StringBuffer()
+                shoe.images.forEachIndexed { index, it ->
+                    stringBuffer.append(it)
+                    if (index < shoe.images.size - 1) {
+                        stringBuffer.append('\n')
+                    }
+                }
+                imageText.text = stringBuffer.toString()
+            }
+
+            binding.linearLayout.addView(shoeRow)
+        }
     }
 }
