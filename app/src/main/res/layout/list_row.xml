@@ -7,17 +7,19 @@
 
     <TextView
         android:id="@+id/nameLabel"
+        style="@style/roboto_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/name"
         app:layout_constraintBottom_toTopOf="@id/sizeLabel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Name:" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/nameText"
+        style="@style/roboto_16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
@@ -29,17 +31,19 @@
 
     <TextView
         android:id="@+id/sizeLabel"
+        style="@style/roboto_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/medium_margin"
+        android:text="@string/size"
         app:layout_constraintBottom_toTopOf="@id/companyLabel"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameLabel"
-        tools:text="Size:" />
+        app:layout_constraintTop_toBottomOf="@id/nameLabel" />
 
     <TextView
         android:id="@+id/sizeText"
+        style="@style/roboto_16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
@@ -51,18 +55,20 @@
 
     <TextView
         android:id="@+id/companyLabel"
+        style="@style/roboto_16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/medium_margin"
         android:layout_marginTop="@dimen/medium_margin"
         android:layout_marginBottom="@dimen/medium_margin"
+        android:text="@string/company"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sizeLabel"
-        tools:text="Company:" />
+        app:layout_constraintTop_toBottomOf="@id/sizeLabel" />
 
     <TextView
         android:id="@+id/companyText"
+        style="@style/roboto_16"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/small_margin"
@@ -80,11 +86,14 @@
         app:layout_constraintGuide_percent="0.5" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/descriptionText"
+        style="@style/roboto_16"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/medium_margin"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="@dimen/medium_margin"
+        android:layout_marginTop="@dimen/medium_margin"
+        android:layout_marginEnd="@dimen/medium_margin"
+        app:layout_constraintBottom_toTopOf="@id/imageText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent"

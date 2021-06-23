@@ -9,9 +9,10 @@
 
         <TextView
             android:id="@+id/titleText"
+            style="@style/roboto_20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/medium_margin"
             android:gravity="center"
             android:text="@string/welcome_to_the_shoe_store"
             app:layout_constraintBottom_toBottomOf="@id/upperHorizontalGuideline"
@@ -33,9 +34,10 @@
 
         <TextView
             android:id="@+id/welcomeText"
+            style="@style/roboto_20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/medium_margin"
             android:gravity="center"
             android:text="@string/welcome_to_the_shoe_store"
             app:layout_constraintBottom_toBottomOf="@id/lowerHorizontalGuideline"
