@@ -58,12 +58,12 @@ Open the starter project in Android Studio
 
 - [ ] Create a new Shoe Detail destination that includes:
 
-    - [ ] A new layout
-    - [ ] A TextView label and EditView for the
-      - [ ] Shoe Name
-      - [ ] Company
-      - [ ] Shoe Size
-      - [ ] Description
+    - [x] A new layout
+    - [x] A TextView label and EditView for the
+      - [x] Shoe Name
+      - [x] Company
+      - [x] Shoe Size
+      - [x] Description
     - [ ] A Cancel button with an action to navigate back to the shoe list screen
     - [ ] A Save button with an action to navigate back to the shoe list screen and add a new Shoe to the Shoe View Model
 

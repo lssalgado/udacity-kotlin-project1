@@ -12,4 +12,11 @@
     <string name="company">Company:</string>
     <string name="missing_images">Missing images!</string>
     <string name="add_shoe">Add Shoe</string>
+    <string name="description">Description:</string>
+    <string name="enter_the_shoe_name">Enter the shoe Name</string>
+    <string name="enter_the_shoe_company">Enter the shoe Company</string>
+    <string name="enter_the_shoe_size">Enter the shoe Size</string>
+    <string name="enter_the_shoe_description">Enter the shoe Description</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
 </resources>
