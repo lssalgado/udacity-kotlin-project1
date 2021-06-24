@@ -19,14 +19,9 @@
 
         <EditText
             android:id="@+id/nameText"
-            style="@style/roboto_20"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/medium_margin"
+            style="@style/shoe_details_edit_text"
             android:hint="@string/enter_the_shoe_name"
-            android:importantForAutofill="no"
             android:inputType="text"
-            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/nameLabel"
             app:layout_constraintTop_toTopOf="parent" />
@@ -44,16 +39,11 @@
 
         <EditText
             android:id="@+id/companyText"
-            style="@style/roboto_20"
-            app:layout_constraintStart_toEndOf="@id/companyLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/medium_margin"
+            style="@style/shoe_details_edit_text"
             android:hint="@string/enter_the_shoe_company"
-            android:importantForAutofill="no"
             android:inputType="text"
-            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/companyLabel"
             app:layout_constraintTop_toBottomOf="@id/nameText" />
 
         <TextView
@@ -69,16 +59,11 @@
 
         <EditText
             android:id="@+id/sizeText"
-            style="@style/roboto_20"
-            app:layout_constraintStart_toEndOf="@id/sizeLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/medium_margin"
+            style="@style/shoe_details_edit_text"
             android:hint="@string/enter_the_shoe_size"
-            android:importantForAutofill="no"
             android:inputType="numberDecimal"
-            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sizeLabel"
             app:layout_constraintTop_toBottomOf="@id/companyText" />
 
         <TextView
@@ -93,16 +78,11 @@
 
         <EditText
             android:id="@+id/descriptionText"
-            style="@style/roboto_20"
-            app:layout_constraintStart_toEndOf="@id/descriptionLabel"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/medium_margin"
+            style="@style/shoe_details_edit_text"
             android:hint="@string/enter_the_shoe_description"
-            android:importantForAutofill="no"
             android:inputType="text"
-            android:maxLines="1"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/descriptionLabel"
             app:layout_constraintTop_toBottomOf="@id/sizeText" />
 
         <Button
