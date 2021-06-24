@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.udacity.shoestore.MainActivity
 import com.udacity.shoestore.MainActivityViewModel
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.ShoelistFragmentBinding
@@ -30,6 +31,8 @@ class ShoeListFragment: Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.shoelist_fragment, container, false)
 
         viewModel = ViewModelProvider(requireActivity()).get(MainActivityViewModel::class.java)
+
+        (requireActivity() as MainActivity).supportActionBar?.setDisplayHomeAsUpEnabled(false)
 
         binding.floatingButton.setOnClickListener {
             Timber.e("Clicked!")
