@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nameLabel"
+            style="@style/shoe_details_text_view"
+            android:text="@string/name"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameText"
+            app:layout_constraintEnd_toEndOf="@id/descriptionLabel"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/nameText"
+            style="@style/shoe_details_edit_text"
+            android:hint="@string/enter_the_shoe_name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/nameLabel"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/companyLabel"
+            style="@style/shoe_details_text_view"
+            android:text="@string/company"
+            app:layout_constraintBaseline_toBaselineOf="@+id/companyText"
+            app:layout_constraintEnd_toEndOf="@+id/descriptionLabel"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/companyText"
+            style="@style/shoe_details_edit_text"
+            android:hint="@string/enter_the_shoe_company"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/companyLabel"
+            app:layout_constraintTop_toBottomOf="@id/nameText" />
+
+        <TextView
+            android:id="@+id/sizeLabel"
+            style="@style/shoe_details_text_view"
+            android:text="@string/size"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sizeText"
+            app:layout_constraintEnd_toEndOf="@+id/descriptionLabel"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/sizeText"
+            style="@style/shoe_details_edit_text"
+            android:hint="@string/enter_the_shoe_size"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sizeLabel"
+            app:layout_constraintTop_toBottomOf="@id/companyText" />
+
+        <TextView
+            android:id="@+id/descriptionLabel"
+            style="@style/shoe_details_text_view"
+            android:text="@string/description"
+            app:layout_constraintBaseline_toBaselineOf="@+id/descriptionText"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <EditText
+            android:id="@+id/descriptionText"
+            style="@style/shoe_details_edit_text"
+            android:hint="@string/enter_the_shoe_description"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/descriptionLabel"
+            app:layout_constraintTop_toBottomOf="@id/sizeText" />
+
+        <Button
+            android:id="@+id/cancelBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:text="@string/cancel"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/saveBt"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/saveBt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cancelBt"
+            app:layout_constraintTop_toTopOf="@id/cancelBt" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
