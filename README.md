@@ -75,5 +75,7 @@ Open the starter project in Android Studio
     - [x] Observe the shoes variable from the ViewModel
     - [x] Use DataBindingUtil to inflate the shoe_list layout
     - [x] Add a new layout item into the scrollview for each shoe.
-    
+
 - [ ] Make the layouts look pretty.
+
+- [ ] Remove unnecessary ViewModels.
