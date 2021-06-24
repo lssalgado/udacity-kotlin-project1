@@ -77,3 +77,5 @@ Open the starter project in Android Studio
     - [x] Add a new layout item into the scrollview for each shoe.
 
 - [ ] Make the layouts look pretty.
+
+- [ ] Remove unnecessary ViewModels.
