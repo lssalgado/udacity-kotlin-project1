@@ -33,7 +33,6 @@ class ShoeListFragment: Fragment() {
 
         binding.floatingButton.setOnClickListener {
             Timber.e("Clicked!")
-//            viewModel.addShoe(Shoe("a", 2.0, "b", "c", arrayListOf("dd")))
             view!!.findNavController().navigate(ShoeListFragmentDirections.actionShoeListFragmentToShoeDetailsFragment())
         }
 
