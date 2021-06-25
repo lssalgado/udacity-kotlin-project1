@@ -78,4 +78,4 @@ Open the starter project in Android Studio
 
 - [x] Make the layouts look pretty.
 
-- [ ] Remove unnecessary ViewModels.
+- [x] Remove unnecessary ViewModels.
