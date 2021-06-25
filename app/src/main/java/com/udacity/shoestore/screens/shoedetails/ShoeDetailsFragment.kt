@@ -17,6 +17,7 @@ class ShoeDetailsFragment : Fragment() {
 
     private lateinit var binding: ShoedetailsFragmentBinding
     private lateinit var viewModel: MainActivityViewModel
+    private val shoe = Shoe("", 0.0, "", "")
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,20 +28,13 @@ class ShoeDetailsFragment : Fragment() {
 
         viewModel = ViewModelProvider(requireActivity()).get(MainActivityViewModel::class.java)
 
+        binding.shoe = shoe
+
         binding.cancelBt.setOnClickListener {
             view!!.findNavController().navigateUp()
         }
 
         binding.saveBt.setOnClickListener {
-            val name = binding.nameText.text.toString()
-            val size = if (binding.sizeText.text.toString().isEmpty()) {
-                0.0
-            } else {
-                binding.sizeText.text.toString().toDouble()
-            }
-            val company = binding.companyText.text.toString()
-            val description = binding.descriptionText.text.toString()
-            val shoe = Shoe(name, size, company, description, arrayListOf())
             viewModel.addShoe(shoe)
             view!!.findNavController().navigateUp()
         }
