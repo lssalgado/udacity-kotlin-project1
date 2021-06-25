@@ -13,7 +13,6 @@ import com.udacity.shoestore.databinding.InstructionsFragmentBinding
 
 class InstructionsFragment: Fragment() {
 
-    private lateinit var viewModel: InstructionsViewModel
     private lateinit var binding: InstructionsFragmentBinding
 
     override fun onCreateView(
@@ -23,7 +22,6 @@ class InstructionsFragment: Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.instructions_fragment, container, false)
-        viewModel = ViewModelProvider(this).get(InstructionsViewModel::class.java)
 
         binding.continueBt.setOnClickListener {
             view!!.findNavController().navigate(InstructionsFragmentDirections.actionInstructionsFragmentToShoeListFragment())

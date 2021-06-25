@@ -14,7 +14,6 @@ import com.udacity.shoestore.databinding.WelcomeFragmentBinding
 
 class WelcomeFragment : Fragment() {
 
-    private lateinit var viewModel: WelcomeViewModel
     private lateinit var binding: WelcomeFragmentBinding
 
     override fun onCreateView(
@@ -24,7 +23,6 @@ class WelcomeFragment : Fragment() {
     ): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.welcome_fragment, container, false)
-        viewModel = ViewModelProvider(this).get(WelcomeViewModel::class.java)
 
         binding.continueBt.setOnClickListener {
             view!!.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionsFragment())
