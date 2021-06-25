@@ -3,20 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-
-        <variable
-            name="viewModel"
-            type="com.udacity.shoestore.screens.login.LoginViewModel" />
-    </data>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/upperHorizontalGuideline"
+            android:id="@+id/horizontalGuideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -35,8 +28,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/medium_margin"
+            android:labelFor="@id/emailEdit"
             android:text="@string/e_mail"
-            app:layout_constraintBottom_toTopOf="@id/upperHorizontalGuideline"
+            app:layout_constraintBottom_toTopOf="@id/passwordLabel"
             app:layout_constraintEnd_toStartOf="@id/emailEdit"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -48,8 +42,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginTop="@dimen/medium_margin"
+            android:labelFor="@id/passwordEdit"
             android:text="@string/password"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
             app:layout_constraintEnd_toStartOf="@id/passwordEdit"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/emailLabel"
@@ -57,26 +52,18 @@
 
         <EditText
             android:id="@+id/emailEdit"
-            style="@style/roboto_16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginEnd="@dimen/medium_margin"
+            style="@style/login_edit_text"
+            android:importantForAutofill="no"
             android:inputType="textEmailAddress"
-            android:maxLines="1"
             app:layout_constraintBaseline_toBaselineOf="@+id/emailLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/emailLabel" />
 
         <EditText
             android:id="@+id/passwordEdit"
-            style="@style/roboto_16"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/medium_margin"
-            android:layout_marginEnd="@dimen/medium_margin"
+            style="@style/login_edit_text"
+            android:importantForAutofill="no"
             android:inputType="textPassword"
-            android:maxLines="1"
             app:layout_constraintBaseline_toBaselineOf="@+id/passwordLabel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/passwordLabel" />
@@ -84,17 +71,24 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_margin="@dimen/big_margin"
-            app:layout_constraintBottom_toBottomOf="@id/lowerHorizontalGuideline"
-            app:layout_constraintTop_toBottomOf="@id/upperHorizontalGuideline"
-            android:background="@drawable/ic_launcher_background"
-            android:src="@drawable/ic_launcher_foreground"/>
+            android:src="@drawable/ic_store"
+            app:layout_constraintBottom_toTopOf="@id/lowerHorizontalGuideline"
+            app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_margin"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/shoe"
+            android:textSize="48sp"
+            app:layout_constraintTop_toBottomOf="@id/horizontalGuideline" />
 
         <Button
             android:id="@+id/createAccountButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/medium_margin"
+            style="@style/login_button"
             android:text="@string/create_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/loginButton"
@@ -102,9 +96,7 @@
 
         <Button
             android:id="@+id/loginButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/medium_margin"
+            style="@style/login_button"
             android:text="@string/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

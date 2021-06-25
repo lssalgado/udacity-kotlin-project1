@@ -37,5 +37,7 @@ class MainActivity : AppCompatActivity() {
         return NavigationUI.navigateUp(navController, appBarConfiguration)
     }
 
-
+    override fun onBackPressed() {
+        NavigationUI.navigateUp(navController, appBarConfiguration)
+    }
 }

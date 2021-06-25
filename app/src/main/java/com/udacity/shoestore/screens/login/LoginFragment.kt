@@ -13,7 +13,6 @@ import com.udacity.shoestore.databinding.LoginFragmentBinding
 
 class LoginFragment : Fragment() {
 
-    private lateinit var viewModel: LoginViewModel
     private lateinit var binding: LoginFragmentBinding
 
     override fun onCreateView(
@@ -22,9 +21,6 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.login_fragment, container, false)
-        viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
-
-        binding.viewModel = viewModel
 
         binding.loginButton.setOnClickListener {
             view!!.findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())

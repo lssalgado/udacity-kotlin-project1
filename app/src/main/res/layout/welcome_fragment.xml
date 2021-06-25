@@ -9,12 +9,9 @@
 
         <TextView
             android:id="@+id/titleText"
-            style="@style/roboto_20"
+            style="@style/fragment_title"
+            android:text="@string/welcome_title"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:gravity="center"
-            android:text="@string/welcome_to_the_shoe_store"
             app:layout_constraintBottom_toBottomOf="@id/upperHorizontalGuideline"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,12 +31,9 @@
 
         <TextView
             android:id="@+id/welcomeText"
-            style="@style/roboto_20"
+            style="@style/fragment_text"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/medium_margin"
-            android:gravity="center"
-            android:text="@string/welcome_to_the_shoe_store"
+            android:text="@string/welcome_text"
             app:layout_constraintBottom_toBottomOf="@id/lowerHorizontalGuideline"
             app:layout_constraintTop_toBottomOf="@id/upperHorizontalGuideline" />
 

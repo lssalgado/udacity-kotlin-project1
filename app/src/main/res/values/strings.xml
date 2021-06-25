@@ -1,18 +1,31 @@
 <resources>
+
+    <!--    Login   -->
     <string name="app_name">ShoeStore</string>
     <string name="create_account">Create Account</string>
     <string name="login">Login</string>
     <string name="e_mail">E-mail:</string>
-    <string name="welcome_to_the_shoe_store">Welcome to the shoe store!!</string>
-    <string name="next">Continue</string>
     <string name="password">Password:</string>
-    <string name="instructions">Instructions</string>
+    <string name="shoe">Shoe</string>
+
+    <!--    Welcome   -->
+    <string name="welcome_title">Welcome to the shoe store!!</string>
+    <string name="welcome_text">You are about to see the best shoe collection in the world history!!</string>
+    <string name="next">Continue</string>
+
+    <!--    Instructions   -->
+    <string name="instructions_title">How to use the Shoe List</string>
+    <string name="instructions_text">In the following screen a list of shoes and their information will be displayed.\n\nYou can click the Plus button in order to add a new shoe to the list.</string>
+
+    <!--    ShoeList   -->
     <string name="name">Name:</string>
     <string name="size">Size:</string>
     <string name="company">Company:</string>
-    <string name="missing_images">Missing images!</string>
-    <string name="add_shoe">Add Shoe</string>
     <string name="description">Description:</string>
+    <string name="missing_images">Missing images!</string>
+    <string name="add_shoe">Add new Shoe</string>
+
+    <!--    ShoeDetails   -->
     <string name="enter_the_shoe_name">Enter the shoe Name</string>
     <string name="enter_the_shoe_company">Enter the shoe Company</string>
     <string name="enter_the_shoe_size">Enter the shoe Size</string>
