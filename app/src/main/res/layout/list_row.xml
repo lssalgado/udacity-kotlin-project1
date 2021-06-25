@@ -1,117 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/small_margin"
+    android:layout_marginTop="@dimen/small_margin"
+    android:layout_marginEnd="@dimen/small_margin"
+    app:cardCornerRadius="@dimen/small_margin"
+    app:strokeColor="@color/colorPrimaryDark"
+    app:strokeWidth="1dp">
 
-    <TextView
-        android:id="@+id/nameLabel"
-        style="@style/roboto_16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:text="@string/name"
-        app:layout_constraintBottom_toTopOf="@id/sizeLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/nameText"
-        style="@style/roboto_16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toEndOf="@id/nameLabel"
-        tools:text="Some Name" />
+        <TextView
+            android:id="@+id/nameLabel"
+            style="@style/list_row_label"
+            android:text="@string/name"
+            app:layout_constraintBottom_toTopOf="@id/sizeLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/sizeLabel"
-        style="@style/roboto_16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:text="@string/size"
-        app:layout_constraintBottom_toTopOf="@id/companyLabel"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nameLabel" />
+        <TextView
+            android:id="@+id/nameText"
+            style="@style/list_row_text_values"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nameLabel"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toEndOf="@id/nameLabel"
+            tools:text="Some Name" />
 
-    <TextView
-        android:id="@+id/sizeText"
-        style="@style/roboto_16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        app:layout_constraintBaseline_toBaselineOf="@+id/sizeLabel"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toEndOf="@id/sizeLabel"
-        tools:text="16" />
+        <TextView
+            android:id="@+id/sizeLabel"
+            style="@style/list_row_label"
+            android:text="@string/size"
+            app:layout_constraintBottom_toTopOf="@id/companyLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameLabel" />
 
-    <TextView
-        android:id="@+id/companyLabel"
-        style="@style/roboto_16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:layout_marginBottom="@dimen/medium_margin"
-        android:text="@string/company"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sizeLabel" />
+        <TextView
+            android:id="@+id/sizeText"
+            style="@style/list_row_text_values"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sizeLabel"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toEndOf="@id/sizeLabel"
+            tools:text="16" />
 
-    <TextView
-        android:id="@+id/companyText"
-        style="@style/roboto_16"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/small_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        app:layout_constraintBaseline_toBaselineOf="@id/companyLabel"
-        app:layout_constraintEnd_toEndOf="@id/guideline"
-        app:layout_constraintStart_toEndOf="@id/companyLabel"
-        tools:text="Some Company" />
+        <TextView
+            android:id="@+id/companyLabel"
+            style="@style/list_row_label"
+            android:layout_marginBottom="@dimen/medium_margin"
+            android:text="@string/company"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sizeLabel" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        <TextView
+            android:id="@+id/companyText"
+            style="@style/list_row_text_values"
+            app:layout_constraintBaseline_toBaselineOf="@id/companyLabel"
+            app:layout_constraintEnd_toEndOf="@id/guideline"
+            app:layout_constraintStart_toEndOf="@id/companyLabel"
+            tools:text="Some Company" />
 
-    <TextView
-        android:id="@+id/descriptionText"
-        style="@style/roboto_16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginTop="@dimen/medium_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        app:layout_constraintBottom_toTopOf="@id/imageText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toTopOf="parent"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
 
-        tools:text="Description" />
 
-    <TextView
-        android:id="@+id/imageText"
-        style="@style/roboto_16"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="@dimen/medium_margin"
-        android:layout_marginEnd="@dimen/medium_margin"
-        android:layout_marginBottom="@dimen/medium_margin"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/guideline"
-        app:layout_constraintTop_toBottomOf="@id/descriptionText"
-        tools:text="Images" />
+        <TextView
+            android:id="@+id/descriptionText"
+            style="@style/list_row_description_images"
+            android:layout_marginTop="@dimen/medium_margin"
+            app:layout_constraintBottom_toTopOf="@id/imageText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Description" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/imageText"
+            style="@style/list_row_description_images"
+            android:layout_marginBottom="@dimen/medium_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/descriptionText"
+            tools:text="Images" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
