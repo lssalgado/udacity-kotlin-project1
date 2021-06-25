@@ -28,6 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/medium_margin"
+            android:labelFor="@id/emailEdit"
             android:text="@string/e_mail"
             app:layout_constraintBottom_toTopOf="@id/passwordLabel"
             app:layout_constraintEnd_toStartOf="@id/emailEdit"
@@ -41,16 +42,18 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/medium_margin"
+            android:labelFor="@id/passwordEdit"
             android:text="@string/password"
+            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
             app:layout_constraintEnd_toStartOf="@id/passwordEdit"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/emailLabel"
-            app:layout_constraintBottom_toBottomOf="@id/horizontalGuideline"
             app:layout_constraintWidth_percent="0.25" />
 
         <EditText
             android:id="@+id/emailEdit"
             style="@style/login_edit_text"
+            android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             app:layout_constraintBaseline_toBaselineOf="@+id/emailLabel"
             app:layout_constraintEnd_toEndOf="parent"
@@ -59,6 +62,7 @@
         <EditText
             android:id="@+id/passwordEdit"
             style="@style/login_edit_text"
+            android:importantForAutofill="no"
             android:inputType="textPassword"
             app:layout_constraintBaseline_toBaselineOf="@+id/passwordLabel"
             app:layout_constraintEnd_toEndOf="parent"
@@ -66,18 +70,18 @@
 
         <Button
             android:id="@+id/createAccountButton"
+            style="@style/login_button"
             android:text="@string/create_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/loginButton"
-            app:layout_constraintStart_toStartOf="parent"
-            style="@style/login_button" />
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/loginButton"
+            style="@style/login_button"
             android:text="@string/login"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/createAccountButton"
-            style="@style/login_button" />
+            app:layout_constraintStart_toEndOf="@id/createAccountButton" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
