@@ -15,6 +15,7 @@
         <TextView
             android:id="@+id/nameLabel"
             style="@style/shoe_details_text_view"
+            android:labelFor="@+id/nameText"
             android:text="@string/name"
             app:layout_constraintBaseline_toBaselineOf="@+id/nameText"
             app:layout_constraintEnd_toEndOf="@id/descriptionLabel"
@@ -24,7 +25,7 @@
             android:id="@+id/nameText"
             android:text="@={shoe.name}"
             style="@style/shoe_details_edit_text"
-            android:hint="@string/enter_the_shoe_name"
+            android:autofillHints="no"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/nameLabel"
@@ -33,6 +34,7 @@
         <TextView
             android:id="@+id/companyLabel"
             style="@style/shoe_details_text_view"
+            android:labelFor="@+id/companyText"
             android:text="@string/company"
             app:layout_constraintBaseline_toBaselineOf="@+id/companyText"
             app:layout_constraintEnd_toEndOf="@+id/descriptionLabel"
@@ -42,7 +44,7 @@
             android:id="@+id/companyText"
             android:text="@={shoe.company}"
             style="@style/shoe_details_edit_text"
-            android:hint="@string/enter_the_shoe_company"
+            android:autofillHints="no"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/companyLabel"
@@ -51,6 +53,7 @@
         <TextView
             android:id="@+id/sizeLabel"
             style="@style/shoe_details_text_view"
+            android:labelFor="@+id/sizeText"
             android:text="@string/size"
             app:layout_constraintBaseline_toBaselineOf="@+id/sizeText"
             app:layout_constraintEnd_toEndOf="@+id/descriptionLabel"
@@ -60,7 +63,7 @@
             android:id="@+id/sizeText"
             android:text="@={`` + shoe.size}"
             style="@style/shoe_details_edit_text"
-            android:hint="@string/enter_the_shoe_size"
+            android:autofillHints="no"
             android:inputType="numberDecimal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/sizeLabel"
@@ -69,6 +72,7 @@
         <TextView
             android:id="@+id/descriptionLabel"
             style="@style/shoe_details_text_view"
+            android:labelFor="@+id/descriptionText"
             android:text="@string/description"
             app:layout_constraintBaseline_toBaselineOf="@+id/descriptionText"
             app:layout_constraintStart_toStartOf="parent" />
@@ -77,7 +81,7 @@
             android:id="@+id/descriptionText"
             android:text="@={shoe.description}"
             style="@style/shoe_details_edit_text"
-            android:hint="@string/enter_the_shoe_description"
+            android:autofillHints="no"
             android:inputType="text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/descriptionLabel"
