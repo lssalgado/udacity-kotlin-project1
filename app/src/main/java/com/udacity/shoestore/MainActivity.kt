@@ -9,6 +9,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.databinding.MainActivityBinding
+import com.udacity.shoestore.screens.shoelist.ShoeListFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,6 +39,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        NavigationUI.navigateUp(navController, appBarConfiguration)
+        if (navController.currentDestination?.label == ShoeListFragment::class.java.simpleName) {
+            finish()
+        } else {
+            NavigationUI.navigateUp(navController, appBarConfiguration)
+        }
     }
 }
